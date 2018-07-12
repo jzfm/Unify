@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Scenario: If there is not a current song, user should receive a Not Found error.</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Scenario: If there is not a current song, user should receive a Not Found error.</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/Scenario: If there is not a current song, user should receive a Not Found error.html">Scenario: If there is not a current song, user should receive a Not Found error</a> &gt; Scenario: If there is not a current song, user should receive a Not Found error.</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.239s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Given &quot;TCM&quot; is not playing any song</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Then Not Found error will be returned</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">When user searches for university's &quot;TCM&quot; current song</td>
+<td>0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">classMethod</td>
+<td>0.239s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2016-04-17 22:36:10.058  INFO 304 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.unify.test.AbstractTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2016-04-17 22:36:10.061  INFO 304 --- [    Test worker] WebAppIntegrationTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-04-17 22:36:10.062  INFO 304 --- [    Test worker] WebAppIntegrationTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@c36d282, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@240b53e1, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@147c73db, org.springframework.test.context.support.DirtiesContextTestExecutionListener@65e1c5d5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5f79b929, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@21136d7c]
+2016-04-17 22:36:10.062  INFO 304 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Replacing scope 'cucumber-glue' from [cucumber.runtime.java.spring.GlueCodeScope@2b9fcb29] to [cucumber.runtime.java.spring.GlueCodeScope@3da28846]
+
+  Scenario: Users logged in a university, should be able to listen current song. ?[90m# listenCurrentSong.feature:5?[0m
+    ?[32mGiven ?[0m?[32m&quot;?[0m?[32m?[1mTCM?[0m?[32m&quot; is playing:?[0m                                                      ?[90m# ListenCurrentSongTests.is_playing(String,Song&gt;)?[0m
+    ?[32mWhen ?[0m?[32muser searches for university &quot;?[0m?[32m?[1mTCM?[0m?[32m&quot; current song?[0m                         ?[90m# ListenCurrentSongTests.user_searches_for_university_current_song(String)?[0m
+    ?[32mThen ?[0m?[32mwill return a song:?[0m                                                     ?[90m# ListenCurrentSongTests.will_return_a_song(Song&gt;)?[0m
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.9</a> at 17/04/2016 22:36:12</p>
+</div>
+</div>
+</body>
+</html>

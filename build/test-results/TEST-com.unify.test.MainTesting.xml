@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.unify.test.MainTesting" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="Jordi-VAIO" time="0.0">
+  <properties/>
+  <system-out><![CDATA[Feature: 
+  As a user, when there is no current song in the university, I want to choose a new song so all other users can listen to it.
+
+  Scenario: Set current song                 ?[90m# chooseSong.feature:34?[0m
+    ?[32mGiven ?[0m?[32mthat "?[0m?[32m?[1mTCM?[0m?[32m" is not playing any song?[0m ?[90m# ChooseSongTests.that_is_not_playing_any_song(String)?[0m
+    ?[32mAnd ?[0m?[32mhas this list of songs:?[0m              ?[90m# ChooseSongTests.has_list_of_songs(Song>)?[0m
+    ?[32mWhen ?[0m?[32muser selects:?[0m                       ?[90m# ChooseSongTests.user_selects(Song>)?[0m
+    ?[32mThen ?[0m?[32m"?[0m?[32m?[1mTCM?[0m?[32m" must be playing:?[0m              ?[90m# ChooseSongTests.must_be_playing(String,Song>)?[0m
+Feature: 
+  As a user, I want to listen to my university's current song, so I can discover awesome music.
+
+  Scenario: If there is no time left to the current song, user should receive a Not Found error. ?[90m# listenCurrentSong.feature:28?[0m
+    ?[32mGiven ?[0m?[32m"?[0m?[32m?[1mTCM?[0m?[32m" is playing a song:?[0m                                                               ?[90m# ListenCurrentSongTests.is_playing_a_song(String,Song>)?[0m
+    ?[32mAnd ?[0m?[32mSystem waits for "?[0m?[32m?[1m2?[0m?[32m" seconds?[0m                                                             ?[90m# ListenCurrentSongTests.system_waits_for_seconds(int)?[0m
+    ?[32mWhen ?[0m?[32muser searches for "?[0m?[32m?[1mTCM?[0m?[32m" song?[0m                                                            ?[90m# ListenCurrentSongTests.user_searches_for_song(String)?[0m
+    ?[32mThen ?[0m?[32mNot Found error will be shown?[0m                                                           ?[90m# ListenCurrentSongTests.not_Found_error_will_be_shown()?[0m
+
+5 Scenarios (?[32m5 passed?[0m)
+18 Steps (?[32m18 passed?[0m)
+0m4,574s
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

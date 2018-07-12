@@ -12,12 +12,14 @@ buildscript {
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
-apply plugin: 'spring-boot' 
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
 
 jar {
-	baseName = 'tcm'
+	baseName = 'unifyTcm'
 	version = '0.0.1'
 }
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -25,17 +27,15 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-data-rest')
+	compile('org.springframework.boot:spring-boot-starter-web')
 	
 	compile('org.mongodb.morphia:morphia:1.1.0')
 	compile('org.mongodb:mongo-java-driver:3.0.4')
 	compile('com.googlecode.json-simple:json-simple:1.1')
-	compile('com.google.code.gson:gson:2.3.1')
-	
-	
-	
+	compile('com.google.code.gson:gson:2.3.1')	
+		
 	testCompile('org.springframework.boot:spring-boot-starter-test',
 	"info.cukes:cucumber-jvm:1.2.4",
         "info.cukes:cucumber-core:1.2.4",
@@ -43,7 +43,6 @@ dependencies {
         "info.cukes:cucumber-junit:1.2.4",
         "info.cukes:cucumber-spring:1.2.4",
         'commons-io:commons-io:2.4') 
-	
 	
 }
 

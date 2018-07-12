@@ -8,6 +8,7 @@ import org.mongodb.morphia.annotations.Embedded;
 
 import com.google.gson.annotations.Expose;
 import com.unify.persistence.CalendarConverter;
+import com.unify.utilities.InvalidParamException;
 
 @Embedded
 @Converters(CalendarConverter.class)
@@ -30,7 +31,18 @@ public class Song {
 	public Song(){
 		
 	}
-	public Song(String title, String artistName, int duration, String songUrl, String imageUrl) {
+	public Song(String title, String artistName, int duration, String songUrl, String imageUrl) throws InvalidParamException{
+		if(title==null || title.trim().equals(""))
+			throw new InvalidParamException();
+		if(artistName==null || artistName.trim().equals(""))
+			throw new InvalidParamException();
+		if(duration < 0)
+			throw new InvalidParamException();
+		if(songUrl==null || songUrl.trim().equals(""))
+			throw new InvalidParamException();
+		if(imageUrl==null || imageUrl.trim().equals(""))
+			throw new InvalidParamException();
+		
 		this.title=title;
 		this.artistName=artistName;
 		this.duration=duration;

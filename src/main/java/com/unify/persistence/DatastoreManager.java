@@ -3,13 +3,10 @@ package com.unify.persistence;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import javax.management.Query;
-
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
 
 import com.mongodb.MongoClient;
-import com.unify.domain.SongsStore;
 import com.unify.domain.University;
 
 public class DatastoreManager {
@@ -42,7 +39,6 @@ public class DatastoreManager {
      */    
 	public void clearBBDD() {
 		datastore.delete(datastore.createQuery(University.class));
-		datastore.delete(datastore.createQuery(SongsStore.class));
 	}
 
 }

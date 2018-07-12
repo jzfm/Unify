@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scenario: Set current song" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-04-17T20:36:09" hostname="Jordi-VAIO" time="0.141">
+  <properties/>
+  <testcase name="Given that &quot;TCM&quot; is not playing any song" classname="Scenario: Set current song" time="0.0"/>
+  <testcase name="And has this list of songs:" classname="Scenario: Set current song" time="0.0"/>
+  <testcase name="When user selects:" classname="Scenario: Set current song" time="0.0"/>
+  <testcase name="Then &quot;TCM&quot; must be playing:" classname="Scenario: Set current song" time="0.0"/>
+  <testcase name="classMethod" classname="Scenario: Set current song" time="0.23"/>
+  <system-out><![CDATA[2016-04-17 22:36:09.582  INFO 304 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.unify.test.AbstractTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2016-04-17 22:36:09.586  INFO 304 --- [    Test worker] WebAppIntegrationTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-04-17 22:36:09.586  INFO 304 --- [    Test worker] WebAppIntegrationTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@153dc354, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6eaad3ab, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4da6ade7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@45ec862f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3eb0daa5, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@63f7153]
+2016-04-17 22:36:09.587  INFO 304 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Replacing scope 'cucumber-glue' from [cucumber.runtime.java.spring.GlueCodeScope@5f7211f6] to [cucumber.runtime.java.spring.GlueCodeScope@672f8d4f]
+
+  Scenario: List all university's songs                  ?[90m# chooseSong.feature:6?[0m
+    ?[32mGiven ?[0m?[32m"?[0m?[32m?[1mTCM?[0m?[32m" isn't playing any song?[0m                   ?[90m# ChooseSongTests.isn_t_playing_any_song(String)?[0m
+    ?[32mAnd ?[0m?[32mhave these songs on its store:?[0m                   ?[90m# ChooseSongTests.have_these_songs_on_its_store(Song>)?[0m
+    ?[32mWhen ?[0m?[32muser searches for all songs of university "?[0m?[32m?[1mTCM?[0m?[32m"?[0m ?[90m# ChooseSongTests.user_searches_for_all_songs_of_university(String)?[0m
+    ?[32mThen ?[0m?[32mwill return next songs:?[0m                         ?[90m# ChooseSongTests.will_return_next_songs(Song>)?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

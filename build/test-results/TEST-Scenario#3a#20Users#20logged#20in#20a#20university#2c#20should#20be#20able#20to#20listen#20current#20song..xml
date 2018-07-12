@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scenario: Users logged in a university, should be able to listen current song." tests="4" skipped="0" failures="0" errors="0" timestamp="2016-04-17T20:36:10" hostname="Jordi-VAIO" time="0.024">
+  <properties/>
+  <testcase name="Given &quot;TCM&quot; is playing:" classname="Scenario: Users logged in a university, should be able to listen current song." time="0.001"/>
+  <testcase name="When user searches for university &quot;TCM&quot; current song" classname="Scenario: Users logged in a university, should be able to listen current song." time="0.001"/>
+  <testcase name="Then will return a song:" classname="Scenario: Users logged in a university, should be able to listen current song." time="0.001"/>
+  <testcase name="classMethod" classname="Scenario: Users logged in a university, should be able to listen current song." time="0.244"/>
+  <system-out><![CDATA[2016-04-17 22:36:09.815  INFO 304 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.unify.test.AbstractTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2016-04-17 22:36:09.819  INFO 304 --- [    Test worker] WebAppIntegrationTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2016-04-17 22:36:09.820  INFO 304 --- [    Test worker] WebAppIntegrationTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4b074388, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4ad53e5b, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@33338044, org.springframework.test.context.support.DirtiesContextTestExecutionListener@13c2d55e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6228dfad, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@16c1255]
+2016-04-17 22:36:09.820  INFO 304 --- [    Test worker] o.s.b.f.s.DefaultListableBeanFactory     : Replacing scope 'cucumber-glue' from [cucumber.runtime.java.spring.GlueCodeScope@672f8d4f] to [cucumber.runtime.java.spring.GlueCodeScope@2b9fcb29]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

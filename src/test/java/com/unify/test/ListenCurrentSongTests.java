@@ -4,6 +4,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 import java.util.List;
 
+import com.unify.application.dto.SongDTO;
+import com.unify.application.dto.UniversityDTO;
 import com.unify.domain.Song;
 import com.unify.domain.University;
 
@@ -24,11 +26,11 @@ public class ListenCurrentSongTests extends AbstractTests{
 	//SCENARIO 1:
 		
 	@Given("^\"([^\"]*)\" is playing:$")
-	public void is_playing(String uniId, List<Song> songs) throws Throwable {
+	public void is_playing(String uniId, List<SongDTO> songs) throws Throwable {
 		clearBBDD();
 		
-		University university=tryToCreateUniversity(uniId);
-		service.addSongsInUniversity(songs, university.getId());
+		UniversityDTO university=tryToCreateUniversity(uniId);
+		service.addSongInUniversity(songs.get(0), university.getId());		
 		playSong(university, songs.get(0));		
 	}
 
@@ -38,12 +40,12 @@ public class ListenCurrentSongTests extends AbstractTests{
 		currentSong=searchForCurrentSong(uniId);
 	}
 
-	private Song currentSong;
+	private SongDTO currentSong;
 	
 	@Then("^will return a song:$")
-	public void will_return_a_song(List<Song> songs) throws Throwable {
-		Song song=songs.get(0);	
-		assertThat("Song not correct ",song.equals(currentSong));
+	public void will_return_a_song(List<SongDTO> songs) throws Throwable {
+		SongDTO song=songs.get(0);	
+		assertThat("Song not correct ",song.getTitle().equals(currentSong.getTitle()));
 	}
 	
 
@@ -72,12 +74,14 @@ public class ListenCurrentSongTests extends AbstractTests{
 	//SCENARIO 3:
 	
 	@Given("^\"([^\"]*)\" is playing a song:$")
-	public void is_playing_a_song(String uniId, List<Song> songs) throws Throwable {
+	public void is_playing_a_song(String uniId, List<SongDTO> songs) throws Throwable {
 		clearBBDD();
 		
 		
-		University university=tryToCreateUniversity(uniId);		
-		service.addSongsInUniversity(songs, university.getId());
+		UniversityDTO university=tryToCreateUniversity(uniId);		
+		for(SongDTO s: songs){
+			service.addSongInUniversity(s, university.getId());
+		}
 		playSong(university, songs.get(0));
 	}
 	
@@ -96,7 +100,6 @@ public class ListenCurrentSongTests extends AbstractTests{
 	public void not_Found_error_will_be_shown() throws Throwable {
 		assertThat("Should return a not found (404) error. But is " + responseCode, responseCode==404);
 		
-		clearBBDD();
 	}
 
 

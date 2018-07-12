@@ -16,7 +16,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 8,
-  "name": "\"TCM\" isn\u0027t playing any song",
+  "name": "\"BCNACTIVA\" isn\u0027t playing any song",
   "keyword": "Given "
 });
 formatter.step({
@@ -98,7 +98,7 @@ formatter.step({
 });
 formatter.step({
   "line": 21,
-  "name": "user searches for all songs of university \"TCM\"",
+  "name": "user searches for all songs of university \"BCNACTIVA\"",
   "keyword": "When "
 });
 formatter.step({
@@ -181,59 +181,59 @@ formatter.step({
 formatter.match({
   "arguments": [
     {
-      "val": "TCM",
+      "val": "BCNACTIVA",
       "offset": 1
     }
   ],
   "location": "ChooseSongTests.isn_t_playing_any_song(String)"
 });
 formatter.result({
-  "duration": 2966729361,
+  "duration": 588631978,
   "status": "passed"
 });
 formatter.match({
-  "location": "ChooseSongTests.have_these_songs_on_its_store(Song\u003e)"
+  "location": "ChooseSongTests.have_these_songs_on_its_store(SongDTO\u003e)"
 });
 formatter.result({
-  "duration": 123483004,
+  "duration": 78379257,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "TCM",
+      "val": "BCNACTIVA",
       "offset": 43
     }
   ],
   "location": "ChooseSongTests.user_searches_for_all_songs_of_university(String)"
 });
 formatter.result({
-  "duration": 19509155,
+  "duration": 5970918,
   "status": "passed"
 });
 formatter.match({
-  "location": "ChooseSongTests.will_return_next_songs(Song\u003e)"
+  "location": "ChooseSongTests.will_return_next_songs(SongDTO\u003e)"
 });
 formatter.result({
-  "duration": 4619948,
+  "duration": 1849669,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 34,
-  "name": "Set current song",
+  "line": 36,
+  "name": "Invalid information",
   "description": "",
-  "id": ";set-current-song",
+  "id": ";invalid-information",
   "type": "scenario",
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 36,
-  "name": "that \"TCM\" is not playing any song",
+  "line": 38,
+  "name": "university \"BCNACTIVA\" is not playing any song",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 37,
-  "name": "has this list of songs:",
+  "line": 40,
+  "name": "tries to add these songs:",
   "rows": [
     {
       "cells": [
@@ -243,163 +243,97 @@ formatter.step({
         "songUrl",
         "imageUrl"
       ],
-      "line": 40
-    },
-    {
-      "cells": [
-        "Hero",
-        "Adele",
-        "300",
-        "http://www.test.com",
-        "http://www.test.com"
-      ],
-      "line": 41
-    },
-    {
-      "cells": [
-        "Joss",
-        "Rulas",
-        "300",
-        "http://www.testing.com",
-        "http://www.test.com"
-      ],
       "line": 42
     },
     {
       "cells": [
-        "Ready?",
-        "Pep Sala",
-        "300",
-        "http://www.tet.com",
+        "",
+        "Adele",
+        "1",
+        "http://www.test.com",
         "http://www.test.com"
       ],
       "line": 43
     },
     {
       "cells": [
-        "Juliar",
-        "Adele",
-        "300",
-        "http://www.ted.com",
+        "Hero",
+        "",
+        "1",
+        "http://www.test.com",
         "http://www.test.com"
       ],
       "line": 44
     },
     {
       "cells": [
-        "Join",
-        "Apple",
-        "300",
-        "http://www.text.com",
+        "Hero",
+        "Adele",
+        "-1",
+        "http://www.test.com",
         "http://www.test.com"
       ],
       "line": 45
     },
     {
       "cells": [
-        "Pelo",
-        "Montana",
-        "300",
-        "http://www.temt.com",
+        "Hero",
+        "Adele",
+        "1",
+        "",
         "http://www.test.com"
       ],
       "line": 46
-    }
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 49,
-  "name": "user selects:",
-  "rows": [
-    {
-      "cells": [
-        "title",
-        "artistName",
-        "duration",
-        "songUrl",
-        "imageUrl"
-      ],
-      "line": 52
     },
     {
       "cells": [
         "Hero",
         "Adele",
-        "300",
+        "1",
         "http://www.test.com",
-        "http://www.test.com"
+        ""
       ],
-      "line": 53
+      "line": 47
     }
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 56,
-  "name": "\"TCM\" must be playing:",
-  "rows": [
-    {
-      "cells": [
-        "title",
-        "artistName",
-        "duration",
-        "songUrl",
-        "imageUrl"
-      ],
-      "line": 58
-    },
-    {
-      "cells": [
-        "Hero",
-        "Adele",
-        "300",
-        "http://www.test.com",
-        "http://www.test.com"
-      ],
-      "line": 59
-    }
-  ],
+  "line": 49,
+  "name": "receives a \"406\" error",
   "keyword": "Then "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "TCM",
-      "offset": 6
+      "val": "BCNACTIVA",
+      "offset": 12
     }
   ],
-  "location": "ChooseSongTests.that_is_not_playing_any_song(String)"
+  "location": "ChooseSongTests.university_is_not_playing_any_song(String)"
 });
 formatter.result({
-  "duration": 49379944,
+  "duration": 14390833,
   "status": "passed"
 });
 formatter.match({
-  "location": "ChooseSongTests.has_list_of_songs(Song\u003e)"
+  "location": "ChooseSongTests.tries_to_add_these_songs(SongDTO\u003e)"
 });
 formatter.result({
-  "duration": 32151468,
-  "status": "passed"
-});
-formatter.match({
-  "location": "ChooseSongTests.user_selects(Song\u003e)"
-});
-formatter.result({
-  "duration": 23519269,
+  "duration": 77858372,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "TCM",
-      "offset": 1
+      "val": "406",
+      "offset": 12
     }
   ],
-  "location": "ChooseSongTests.must_be_playing(String,Song\u003e)"
+  "location": "ChooseSongTests.receives_a_error(int)"
 });
 formatter.result({
-  "duration": 20045007,
+  "duration": 103004,
   "status": "passed"
 });
 formatter.uri("listenCurrentSong.feature");
@@ -420,7 +354,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 7,
-  "name": "\"TCM\" is playing:",
+  "name": "\"BCNACTIVA\" is playing:",
   "rows": [
     {
       "cells": [
@@ -447,7 +381,7 @@ formatter.step({
 });
 formatter.step({
   "line": 15,
-  "name": "user searches for university \"TCM\" current song",
+  "name": "user searches for university \"BCNACTIVA\" current song",
   "keyword": "When "
 });
 formatter.step({
@@ -480,34 +414,34 @@ formatter.step({
 formatter.match({
   "arguments": [
     {
-      "val": "TCM",
+      "val": "BCNACTIVA",
       "offset": 1
     }
   ],
-  "location": "ListenCurrentSongTests.is_playing(String,Song\u003e)"
+  "location": "ListenCurrentSongTests.is_playing(String,SongDTO\u003e)"
 });
 formatter.result({
-  "duration": 120710949,
+  "duration": 25559959,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "TCM",
+      "val": "BCNACTIVA",
       "offset": 30
     }
   ],
   "location": "ListenCurrentSongTests.user_searches_for_university_current_song(String)"
 });
 formatter.result({
-  "duration": 13728554,
+  "duration": 10017390,
   "status": "passed"
 });
 formatter.match({
-  "location": "ListenCurrentSongTests.will_return_a_song(Song\u003e)"
+  "location": "ListenCurrentSongTests.will_return_a_song(SongDTO\u003e)"
 });
 formatter.result({
-  "duration": 1027225,
+  "duration": 399552,
   "status": "passed"
 });
 formatter.scenario({
@@ -520,12 +454,12 @@ formatter.scenario({
 });
 formatter.step({
   "line": 23,
-  "name": "\"TCM\" is not playing any song",
+  "name": "\"BCNACTIVA\" is not playing any song",
   "keyword": "Given "
 });
 formatter.step({
   "line": 24,
-  "name": "user searches for university\u0027s \"TCM\" current song",
+  "name": "user searches for university\u0027s \"BCNACTIVA\" current song",
   "keyword": "When "
 });
 formatter.step({
@@ -536,34 +470,34 @@ formatter.step({
 formatter.match({
   "arguments": [
     {
-      "val": "TCM",
+      "val": "BCNACTIVA",
       "offset": 1
     }
   ],
   "location": "ListenCurrentSongTests.is_not_playing_any_song(String)"
 });
 formatter.result({
-  "duration": 37479612,
+  "duration": 12638303,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "TCM",
+      "val": "BCNACTIVA",
       "offset": 32
     }
   ],
   "location": "ListenCurrentSongTests.user_searches_for_university_s_current_song(String)"
 });
 formatter.result({
-  "duration": 113984804,
+  "duration": 10327868,
   "status": "passed"
 });
 formatter.match({
   "location": "ListenCurrentSongTests.not_Found_error_will_be_returned()"
 });
 formatter.result({
-  "duration": 133428,
+  "duration": 37390,
   "status": "passed"
 });
 formatter.scenario({
@@ -576,7 +510,7 @@ formatter.scenario({
 });
 formatter.step({
   "line": 30,
-  "name": "\"TCM\" is playing a song:",
+  "name": "\"BCNACTIVA\" is playing a song:",
   "rows": [
     {
       "cells": [
@@ -608,7 +542,7 @@ formatter.step({
 });
 formatter.step({
   "line": 36,
-  "name": "user searches for \"TCM\" song",
+  "name": "user searches for \"BCNACTIVA\" song",
   "keyword": "When "
 });
 formatter.step({
@@ -619,14 +553,14 @@ formatter.step({
 formatter.match({
   "arguments": [
     {
-      "val": "TCM",
+      "val": "BCNACTIVA",
       "offset": 1
     }
   ],
-  "location": "ListenCurrentSongTests.is_playing_a_song(String,Song\u003e)"
+  "location": "ListenCurrentSongTests.is_playing_a_song(String,SongDTO\u003e)"
 });
 formatter.result({
-  "duration": 80842461,
+  "duration": 21280722,
   "status": "passed"
 });
 formatter.match({
@@ -639,27 +573,27 @@ formatter.match({
   "location": "ListenCurrentSongTests.system_waits_for_seconds(int)"
 });
 formatter.result({
-  "duration": 2000695366,
+  "duration": 2000756216,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "TCM",
+      "val": "BCNACTIVA",
       "offset": 19
     }
   ],
   "location": "ListenCurrentSongTests.user_searches_for_song(String)"
 });
 formatter.result({
-  "duration": 22914993,
+  "duration": 11799978,
   "status": "passed"
 });
 formatter.match({
   "location": "ListenCurrentSongTests.not_Found_error_will_be_shown()"
 });
 formatter.result({
-  "duration": 3195432,
+  "duration": 51685,
   "status": "passed"
 });
 });

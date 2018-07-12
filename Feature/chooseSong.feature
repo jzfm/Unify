@@ -5,7 +5,7 @@ As a user, when there is no current song in the university, I want to choose a n
 
 Scenario: List all university's songs
  
-Given "TCM" isn't playing any song
+Given "BCNACTIVA" isn't playing any song
 And have these songs on its store:
  
 |  title 		| artistName	| duration | 				songUrl         |       imageUrl          | 
@@ -18,7 +18,7 @@ And have these songs on its store:
 
 			  
 
-When user searches for all songs of university "TCM"
+When user searches for all songs of university "BCNACTIVA"
 Then will return next songs:
  
 
@@ -31,31 +31,20 @@ Then will return next songs:
 |   Pelo    | Montana   	| 	300 	 | http://www.temt.com    |  http://www.test.com    |
 			  
 			
-Scenario: Set current song
 
-Given that "TCM" is not playing any song
-And has this list of songs:
+			
+Scenario: Invalid information 
 
+Given university "BCNACTIVA" is not playing any song
 
-|  title 		| artistName	| duration | 				songUrl         |       imageUrl          | 
-|   Hero    | Adele   		| 	300 	 | http://www.test.com    |  http://www.test.com    |
-|   Joss    | Rulas    		| 	300 	 | http://www.testing.com |  http://www.test.com    |
-|   Ready?  | Pep Sala		| 	300 	 | http://www.tet.com     |  http://www.test.com    |
-|   Juliar  | Adele   		| 	300 	 | http://www.ted.com     |  http://www.test.com    |
-|   Join    | Apple  	   	| 	300 	 | http://www.text.com    |  http://www.test.com    |
-|   Pelo    | Montana   	| 	300 	 | http://www.temt.com    |  http://www.test.com    |			  
+When tries to add these songs: 
 
-
-When user selects: 
-
-
-|  title 		| artistName	| duration | 				songUrl         |       imageUrl          | 
-|   Hero    | Adele   		| 	300 	 | http://www.test.com    |  http://www.test.com    |			  
-
-
-Then "TCM" must be playing:
-
-|  title 		| artistName	| duration | 				songUrl         |       imageUrl          | 
-|   Hero    | Adele   		| 	300 	 | http://www.test.com    |  http://www.test.com    |			  
-
- 
+		|  title 		| artistName	| duration | 				songUrl    |        imageUrl  			|   
+		|   		    | Adele   		| 	1 	 | http://www.test.com |   http://www.test.com  |
+		|   Hero    | 			   		| 	1 	 | http://www.test.com |   http://www.test.com  |
+		|   Hero    | Adele   		| 	-1 	 | http://www.test.com |   http://www.test.com  |
+		|   Hero    | Adele   		| 	1 	 | 										 |   http://www.test.com  |
+		|   Hero    | Adele   		| 	1 	 | 		http://www.test.com		|    					 |
+		
+Then receives a "406" error
+			
