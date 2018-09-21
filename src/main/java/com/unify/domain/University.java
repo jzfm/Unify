@@ -32,9 +32,7 @@ public class University {
 
 	}
 
-	public University(String uniId) {
-		this.id = uniId;
-	}
+	public University(String uniId) { this.id = uniId; }
 
 	public void setCurrentSong(Song song) throws InvalidParamException, InvalidActionException {
 		if (song == null)
@@ -50,9 +48,7 @@ public class University {
 	}
 
 	public Song getCurrentSong() throws NoSongToPlayException {
-		if (currentSong == null)
-			throw new NoSongToPlayException();
-		if (!currentSong.hasTimeLeft())
+		if (currentSong == null || !currentSong.hasTimeLeft())
 			throw new NoSongToPlayException();
 		return currentSong;
 	}
